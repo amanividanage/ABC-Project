@@ -136,7 +136,7 @@ $result = mysqli_stmt_get_result($stmt);
 </tr>
 <tr>
          <td>
-             <input type="hidden" name="id" value="<?php echo $id; ?>">
+         <input type="hidden" name="id" value="<?php  echo htmlspecialchars($id,  ENT_QUOTES, 'UTF-8'); ?>">
              <input type="hidden" name="current_image" value="<?php echo $current_image; ?>">
 
              <input type="submit" name="submit" value="Update" class="btn-update">

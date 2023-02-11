@@ -37,7 +37,8 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="hidden" name="id" value="<?php echo $id ?>">
+                    <input type="hidden" name="id" value="<?php  echo htmlspecialchars($id,  ENT_QUOTES, 'UTF-8'); ?>">
+                        
                         <input type="submit" name="submit" value="Change Password" class="btn-update">
                     </td>
                 </tr>
