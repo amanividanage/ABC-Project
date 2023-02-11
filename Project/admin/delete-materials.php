@@ -13,7 +13,7 @@ if(isset($_GET['id']) && isset($_GET['image_name'])){
     if($image_name != ""){
 
         //get the path of the image
-        $path = "../images/material/".$image_name;
+        $path = "../images/material/".basename($image_name);
 
         //remove image file from the folder
         $remove = unlink($path);

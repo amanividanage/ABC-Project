@@ -132,9 +132,9 @@
                         
                         $source_path = $_FILES['image']['tmp_name'];
 
-                        $destination_path = "../images/category/".$image_name;
+                        $destination_path = "../images/category/".basename($image_name);
 
-                        //uploaad the image
+                        //upload the image
                         $upload = move_uploaded_file($source_path,$destination_path);
 
                         //check whether the image is uploaded or not
@@ -148,7 +148,7 @@
 
                         //remove the current image if available
                         if($current_image != ""){
-                            $remove_path = "../images/category/".$current_image;
+                            $remove_path = "../images/category/".basename($current_image);
                             $remove = unlink($remove_path);
                             
                             //check whether the image is removed

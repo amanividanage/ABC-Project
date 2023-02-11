@@ -178,7 +178,8 @@ $result = mysqli_stmt_get_result($stmt);
 
                                     //get the source path and destination path
                                     $src_path = $_FILES['image']['tmp_name'];  //source path
-                                    $dest_path = "../images/material/".$image_name; //destination path
+                                    $dest_path = "../images/material/".basename($image_name); 
+                                    //destination path
 
                                     //upload the image
                                     $upload = move_uploaded_file($src_path, $dest_path);
@@ -201,7 +202,7 @@ $result = mysqli_stmt_get_result($stmt);
                                     if($current_image!=""){
                                         //current image is available
                                         //remove the image
-                                        $remove_path = "../images/material/".$current_image;
+                                        $remove_path = "../images/material/".basename($current_image);
 
                                         $remove = unlink($remove_path);
 

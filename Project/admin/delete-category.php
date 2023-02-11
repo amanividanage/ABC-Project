@@ -10,7 +10,7 @@
         //remove the image file if available
         if($image_name != ""){
             //image is available
-            $path = "../images/category/".$image_name;
+            $path = "../images/category/".basename($image_name);
             //remove the image
             $remove = unlink($path);
 
